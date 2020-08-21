@@ -6,7 +6,7 @@
 <form action="/" method="post">
     <textarea name="text" placeholder="Enter the Text" id="Raw_text" style="position:relative;height:500px; width:500px;left:50px"></textarea>
     <input type="submit" style="position:absolute;top:300px; left:640px">
-    <textarea style="position:relative;height:500px; width:500px; left:300px">{{results}}</textarea>
+    <textarea style="position:relative;height:500px; width:500px; left:300px">{{results if results else ""}}</textarea>
 </form>
 
 </body>
