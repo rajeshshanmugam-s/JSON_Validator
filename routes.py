@@ -15,8 +15,8 @@ def index():
     try:
         raw_json = flk.request.form.get('text', "default text")
         valid_json = json.loads(raw_json)
-    except ValueError:
-        result = "Not a valid Json"
+    except Exception as error:
+        result = error
         return flk.render_template('index.html', results=result)
     return flk.render_template('index.html', results=valid_json)
 
